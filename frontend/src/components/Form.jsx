@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import api from '../api'
 import { useNavigate } from 'react-router-dom'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants'
-import '../styles/Form.css'
+// Tailwind styles applied via className; removed custom CSS import
 export default function Form(props) {
     const { route, method } = props
     const [username, setUsername] = useState("")
@@ -43,28 +43,30 @@ export default function Form(props) {
 
     }
     return (
-        <form onSubmit={handleSubmit} className='form-contaniner'>
-            <h1>{method === "Login" ? "Login" : "Register"}</h1>
-            <input 
-            className='form-input' 
-            type="text" 
-            value={username}
-            onChange={(e)=>{
-                setUsername(e.target.value)
-                console.log(e.target.value)
-            }}
-            placeholder='Username' 
+        <form onSubmit={handleSubmit} className="max-w-[350px] mx-auto my-10 p-8 bg-white rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] flex flex-col gap-4">
+            <h1 className="text-center mb-3 text-2xl text-gray-900 tracking-wide">
+                {method === "Login" ? "Login" : "Register"}
+            </h1>
+            <input
+                className="px-4 py-3 border border-gray-300 rounded-md text-base bg-gray-50 transition-colors outline-none focus:border-blue-600 focus:bg-white"
+                type="text"
+                value={username}
+                onChange={(e) => {
+                    setUsername(e.target.value)
+                    console.log(e.target.value)
+                }}
+                placeholder="Username"
             />
-            <input 
-            className='form-input' 
-            type="password" 
-            value={password}
-            onChange={(e)=>{
-                setPassword(e.target.value)
-            }}
-            placeholder='Password' 
+            <input
+                className="px-4 py-3 border border-gray-300 rounded-md text-base bg-gray-50 transition-colors outline-none focus:border-blue-600 focus:bg-white"
+                type="password"
+                value={password}
+                onChange={(e) => {
+                    setPassword(e.target.value)
+                }}
+                placeholder="Password"
             />
-            <button className="form-button" type='submit'>
+            <button className="py-3 mt-2 bg-blue-600 text-white rounded-md text-lg font-semibold cursor-pointer transition-colors hover:bg-blue-700 focus:bg-blue-700" type='submit'>
                 {method === "Login" ? "Login" : "Register"}
             </button>
         </form>
