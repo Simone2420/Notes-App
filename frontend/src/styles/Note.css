@@ -1,0 +1,80 @@
+.note-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px 20px;
+    margin: 16px 0;
+    max-width: 800px;
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.note-container:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.note-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #2d3748;
+}
+
+.note-content {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 0 0 8px 0;
+}
+
+.note-date,
+.note-updated-at {
+    font-size: 0.85rem;
+    color: #718096;
+    margin: 0;
+}
+
+.note-delete-button,
+.note-edit-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background 0.15s;
+}
+
+.note-delete-button {
+    background: #e53e3e;
+    color: #fff;
+}
+
+.note-delete-button:hover {
+    background: #c53030;
+}
+
+.note-edit-button {
+    background: #3182ce;
+    color: #fff;
+}
+
+.note-edit-button:hover {
+    background: #2b6cb0;
+}
+
+/* Aumenta el tamaño de las notas */
+.note-container {
+    font-size: 1.15rem;
+    padding: 32px 28px;
+    max-width: 950px;
+}
+
+.note-title {
+    font-size: 2rem;
+}
+
+.note-content {
+    font-size: 1.15rem;
+}
