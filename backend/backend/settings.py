@@ -73,9 +73,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "https://notes-app-one-mocha.vercel.app/"
+    "*",
 ]
 
 ROOT_URLCONF = 'backend.urls'
