@@ -3,5 +3,5 @@ window.configs = {
     // apiUrl: 'http://localhost:8000',
     
     // // Para la API externa de Produccion, usa esta línea:
-    apiUrl: 'https://notes-app-bd8g.onrender.com/',
+    apiUrl: 'https://notes-app-backend-mqkvvj07d.vercel.app/',
 };

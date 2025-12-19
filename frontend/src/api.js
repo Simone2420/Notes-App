@@ -2,7 +2,7 @@ import axios from "axios"
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "./constants"
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : "https://notes-app-bd8g.onrender.com/"
+  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : "https://notes-app-backend-mqkvvj07d.vercel.app/"
   
 })
 
